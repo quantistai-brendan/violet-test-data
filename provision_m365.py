@@ -3,9 +3,9 @@ Violet Test Data Automation — Microsoft 365 Provisioning
 =========================================================
 Automates Steps 1, 3, 4, and 5 from the Outlook Setup document:
   - Creates M365 test user accounts
-  - Sends outbound emails (Outlook → Gmail) via Graph API
+  - Sends outbound emails (Outlook → client alias) via Graph API
   - Creates calendar events for both test users
-  - Sends inbound emails (Gmail → Outlook) via SMTP
+  - Sends inbound emails (client alias → Outlook) via SMTP
 
 NOT automated (requires manual steps):
   - Gmail account creation (Google does not allow programmatic account creation)
@@ -189,11 +189,11 @@ def assign_licence(user_id: str, sku_friendly_name: str, dry_run: bool = False):
 
 
 # ---------------------------------------------------------------------------
-# Step 3 & 4 — Send Emails (Outbound: Outlook → Gmail)
+# Step 3 & 4 — Send Emails (Outbound: Outlook → client alias)
 # ---------------------------------------------------------------------------
 def send_outbound_emails(dry_run: bool = False):
     """
-    Send outbound emails from M365 test accounts to Gmail addresses.
+    Send outbound emails from M365 test accounts to client alias addresses.
     Uses Graph API sendMail endpoint (no SMTP credentials needed).
     """
     log.info("=== Steps 3&4: Sending outbound emails ===")
@@ -207,31 +207,31 @@ def send_outbound_emails(dry_run: bool = False):
                     "content":     email["body"],
                 },
                 "toRecipients": [
-                    {"emailAddress": {"address": email["to_gmail"]}}
+                    {"emailAddress": {"address": email["to_email"]}}
                 ],
             },
             "saveToSentItems": True,
         }
         graph("POST", f"/users/{upn}/sendMail", payload, dry_run=dry_run)
         log.info("  [%d/%d] SENT  %s → %s | %s",
-                 i, len(OUTBOUND_EMAILS), upn, email["to_gmail"], email["subject"][:60])
+                 i, len(OUTBOUND_EMAILS), upn, email["to_email"], email["subject"][:60])
         if not dry_run:
             time.sleep(0.3)   # Polite rate limiting
 
 
 # ---------------------------------------------------------------------------
-# Step 3 — Send Inbound Emails (Gmail → Outlook) via Graph API injection
+# Step 3 — Send Inbound Emails (client alias → Outlook) via Graph API injection
 # ---------------------------------------------------------------------------
 def inject_inbound_emails(dry_run: bool = False):
     """
     Inject inbound emails into M365 inboxes using Graph API message creation.
     This creates the email directly in the inbox (appearing as received),
-    without needing Gmail SMTP credentials.
+    without needing alias credentials.
 
     The 'from' address is set to the Gmail address so Violet's domain-matching
     logic works correctly.
     """
-    log.info("=== Step 3: Injecting inbound emails (Gmail → Outlook) ===")
+    log.info("=== Step 3: Injecting inbound emails (client alias → Outlook) ===")
     for i, email in enumerate(INBOUND_EMAILS, 1):
         upn = f"{email['to_username']}@{DOMAIN}"
 
@@ -244,8 +244,8 @@ def inject_inbound_emails(dry_run: bool = False):
             },
             "from": {
                 "emailAddress": {
-                    "address": email["from_gmail"],
-                    "name":    email["from_gmail"].split("@")[0].replace(".", " ").title(),
+                    "address": email["from_email"],
+                    "name":    email["from_email"].split("@")[0].replace(".", " ").title(),
                 }
             },
             "toRecipients": [
@@ -261,7 +261,7 @@ def inject_inbound_emails(dry_run: bool = False):
                   {"destinationId": "inbox"}, dry_run=False)
 
         log.info("  [%d/%d] INJECTED  %s → %s | %s",
-                 i, len(INBOUND_EMAILS), email["from_gmail"], upn, email["subject"][:60])
+                 i, len(INBOUND_EMAILS), email["from_email"], upn, email["subject"][:60])
         if not dry_run:
             time.sleep(0.3)
 
