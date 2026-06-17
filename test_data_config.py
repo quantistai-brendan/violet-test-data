@@ -38,37 +38,37 @@ CLIENTS = [
     {
         "name": "Hargreaves & Partners Ltd",
         "status": "Healthy",
-        "gmail": "hargreaves.partners.test@gmail.com",
+        "gmail": "hargreaves.partners.test@quantistai.com",
         "assigned_to": "sarah.chen",   # internal M365 username prefix
     },
     {
         "name": "Meridian Consulting Solutions",
         "status": "Healthy",
-        "gmail": "hargreaves.partners.test@gmail.com",   # shared Gmail (2 clients per account)
+        "gmail": "hargreaves.partners.test@quantistai.com",   # shared Gmail (2 clients per account)
         "assigned_to": "james.walker",
     },
     {
         "name": "Wentworth Solutions Ltd",
         "status": "Critical",
-        "gmail": "wentworth.solutions.test@gmail.com",
+        "gmail": "wentworth.solutions.test@quantistai.com",
         "assigned_to": "james.walker",
     },
     {
         "name": "Thornbury Creative Agency",
         "status": "At Risk",
-        "gmail": "thornbury.creative.test@gmail.com",
+        "gmail": "thornbury.creative.test@quantistai.com",
         "assigned_to": "sarah.chen",
     },
     {
         "name": "Pinnacle Property Management",
         "status": "At Risk",
-        "gmail": "wentworth.solutions.test@gmail.com",
+        "gmail": "wentworth.solutions.test@quantistai.com",
         "assigned_to": "james.walker",
     },
     {
         "name": "Blackwood Digital Ltd",
         "status": "Dormant",
-        "gmail": "thornbury.creative.test@gmail.com",
+        "gmail": "thornbury.creative.test@quantistai.com",
         "assigned_to": "sarah.chen",
     },
 ]
@@ -84,113 +84,113 @@ OUTBOUND_EMAILS = [
     # --- Sarah Chen: Hargreaves & Partners (healthy, frequent contact) ---
     {
         "from_username": "sarah.chen",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Hargreaves & Partners Ltd — Website Redesign proposal",
         "body": "Hi, please find attached our proposal for the website redesign project. Looking forward to your feedback.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Re: Hargreaves & Partners Ltd — Homepage wireframe feedback",
         "body": "Thanks for the feedback — we'll incorporate the amendments in the next revision.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Re: Hargreaves & Partners Ltd — Brand colour refinements",
         "body": "Great — confirmed. We'll proceed with the approved colour palette.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Re: Hargreaves & Partners Ltd — Project kickoff notes",
         "body": "Notes from today's kickoff attached. Next steps as discussed.",
     },
     # --- Sarah Chen: Thornbury Creative Agency (at risk, scope creep) ---
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Thornbury Creative Agency — Brand Refresh kickoff",
         "body": "Welcome to the project. Please find the kickoff notes and initial timeline attached.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Re: Thornbury Creative Agency — Logo concepts round 2",
         "body": "Round 2 concepts attached — let us know which direction you'd like to take forward.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Re: Thornbury Creative Agency — Brand guidelines update",
         "body": "Brand guidelines updated with your feedback. Please review and confirm.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Thornbury Creative Agency — Scope change request: social media templates",
         "body": "I wanted to flag that the social media template request is outside the original scope. Happy to discuss options.",
     },
     # --- Sarah Chen: Blackwood Digital (dormant, project complete) ---
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Blackwood Digital Ltd — Annual Report first draft",
         "body": "Please find the first draft of the annual report attached for your review.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Re: Blackwood Digital Ltd — Print proofs approved",
         "body": "Confirmed — sending to print today. Great working with you on this.",
     },
     {
         "from_username": "sarah.chen",
-        "to_gmail": "thornbury.creative.test@gmail.com",
+        "to_gmail": "thornbury.creative.test@quantistai.com",
         "subject": "Re: Blackwood Digital Ltd — Final sign-off confirmed",
         "body": "Wonderful — project now complete. It's been a pleasure. We'll be in touch for future projects.",
     },
     # --- James Walker: Meridian Consulting (healthy) ---
     {
         "from_username": "james.walker",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Meridian Consulting Solutions — Audit engagement letter",
         "body": "Please find the audit engagement letter attached. Kindly sign and return at your earliest convenience.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Re: Meridian Consulting Solutions — Q3 audit document checklist",
         "body": "Checklist received — we're working through the items. Will revert by end of week.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "hargreaves.partners.test@gmail.com",
+        "to_gmail": "hargreaves.partners.test@quantistai.com",
         "subject": "Re: Meridian Consulting Solutions — Revenue recognition queries",
         "body": "Happy to schedule a call — availability sent separately.",
     },
     # --- James Walker: Wentworth Solutions (critical — gap required) ---
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Wentworth Solutions Ltd — Project Nexus kickoff",
         "body": "Kickoff notes from today attached. Timeline and milestones as discussed.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Re: Wentworth Solutions Ltd — Migration timeline concerns",
         "body": "Understood — we're reviewing the timeline and will come back with a revised plan.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Re: Wentworth Solutions Ltd — UAT delay notification",
         "body": "Noted. We'll adjust the UAT schedule accordingly and communicate to the wider team.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Re: Wentworth Solutions Ltd — Project Nexus API access still pending",
         "body": "Chasing IT for the API access — will escalate if no response by end of day.",
         # NOTE: This is the LAST email for Wentworth. No further contact = 3-week gap.
@@ -198,19 +198,19 @@ OUTBOUND_EMAILS = [
     # --- James Walker: Pinnacle Property Management (at risk — gap required) ---
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Pinnacle Property Management — Portfolio Review proposal",
         "body": "Please find our portfolio review proposal attached. Happy to discuss further.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Re: Pinnacle Property Management — Additional site visit required",
         "body": "Understood — we'll arrange the additional site visit. Dates to follow.",
     },
     {
         "from_username": "james.walker",
-        "to_gmail": "wentworth.solutions.test@gmail.com",
+        "to_gmail": "wentworth.solutions.test@quantistai.com",
         "subject": "Re: Pinnacle Property Management — Valuation report timeline",
         "body": "We're on track for the agreed timeline. Will share a draft by end of month.",
         # NOTE: This is the LAST email for Pinnacle. No further contact = 4-week gap.
@@ -225,53 +225,53 @@ OUTBOUND_EMAILS = [
 INBOUND_EMAILS = [
     # Hargreaves → Sarah
     {
-        "from_gmail": "hargreaves.partners.test@gmail.com",
+        "from_gmail": "hargreaves.partners.test@quantistai.com",
         "to_username": "sarah.chen",
         "subject": "Re: Homepage wireframe — looks great, a few amends attached",
         "body": "Hi Sarah, thanks for the wireframe — it looks great. A few minor amends attached.",
     },
     {
-        "from_gmail": "hargreaves.partners.test@gmail.com",
+        "from_gmail": "hargreaves.partners.test@quantistai.com",
         "to_username": "sarah.chen",
         "subject": "Re: Brand colour refinements — approved, go ahead",
         "body": "Hi Sarah, approved — please go ahead with the colour palette as discussed.",
     },
     # Meridian → James
     {
-        "from_gmail": "hargreaves.partners.test@gmail.com",
+        "from_gmail": "hargreaves.partners.test@quantistai.com",
         "to_username": "james.walker",
         "subject": "Re: Q3 audit — documents uploaded to shared folder",
         "body": "Hi James, documents uploaded to the shared folder as requested.",
     },
     {
-        "from_gmail": "hargreaves.partners.test@gmail.com",
+        "from_gmail": "hargreaves.partners.test@quantistai.com",
         "to_username": "james.walker",
         "subject": "Re: Revenue recognition — can we schedule a call?",
         "body": "Hi James, happy to schedule a call — what works for you this week?",
     },
     # Wentworth → James (ONLY ONE — creates the gap)
     {
-        "from_gmail": "wentworth.solutions.test@gmail.com",
+        "from_gmail": "wentworth.solutions.test@quantistai.com",
         "to_username": "james.walker",
         "subject": "Re: Project Nexus — API access request submitted to IT",
         "body": "Hi James, just to confirm the API access request has been submitted to our IT team.",
     },
     # Thornbury → Sarah
     {
-        "from_gmail": "thornbury.creative.test@gmail.com",
+        "from_gmail": "thornbury.creative.test@quantistai.com",
         "to_username": "sarah.chen",
         "subject": "Re: Brand refresh — can we add social media templates to the scope?",
         "body": "Hi Sarah, we'd love to add social media templates — can we discuss the cost?",
     },
     {
-        "from_gmail": "thornbury.creative.test@gmail.com",
+        "from_gmail": "thornbury.creative.test@quantistai.com",
         "to_username": "sarah.chen",
         "subject": "Re: Logo concepts — love option 3, let's proceed",
         "body": "Hi Sarah, option 3 is the one — please proceed.",
     },
     # Blackwood → Sarah (ONLY ONE, old — 2-month gap)
     {
-        "from_gmail": "thornbury.creative.test@gmail.com",
+        "from_gmail": "thornbury.creative.test@quantistai.com",
         "to_username": "sarah.chen",
         "subject": "Re: Annual report — sign-off confirmed, great work",
         "body": "Hi Sarah, happy to confirm sign-off. Great work on the report — we're very pleased.",
@@ -372,10 +372,10 @@ CALENDAR_EVENTS = [
 # Xero contact → Gmail mapping (for updating Xero contact emails)
 # ---------------------------------------------------------------------------
 XERO_CONTACT_EMAIL_MAP = {
-    "Hargreaves & Partners Ltd":       "hargreaves.partners.test@gmail.com",
-    "Meridian Consulting Solutions":   "hargreaves.partners.test@gmail.com",
-    "Wentworth Solutions Ltd":         "wentworth.solutions.test@gmail.com",
-    "Pinnacle Property Management":    "wentworth.solutions.test@gmail.com",
-    "Thornbury Creative Agency":       "thornbury.creative.test@gmail.com",
-    "Blackwood Digital Ltd":           "thornbury.creative.test@gmail.com",
+    "Hargreaves & Partners Ltd":       "hargreaves.partners.test@quantistai.com",
+    "Meridian Consulting Solutions":   "hargreaves.partners.test@quantistai.com",
+    "Wentworth Solutions Ltd":         "wentworth.solutions.test@quantistai.com",
+    "Pinnacle Property Management":    "wentworth.solutions.test@quantistai.com",
+    "Thornbury Creative Agency":       "thornbury.creative.test@quantistai.com",
+    "Blackwood Digital Ltd":           "thornbury.creative.test@quantistai.com",
 }
