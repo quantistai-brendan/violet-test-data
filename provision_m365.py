@@ -49,10 +49,15 @@ import requests
 # ---------------------------------------------------------------------------
 # Configuration — fill these in before running
 # ---------------------------------------------------------------------------
-TENANT_ID     = "YOUR_TENANT_ID"          # Azure AD tenant ID (GUID)
-CLIENT_ID     = "YOUR_CLIENT_ID"          # App registration client ID
-CLIENT_SECRET = "YOUR_CLIENT_SECRET"      # App registration client secret
-DOMAIN        = "quantistai.com"          # M365 domain (must match your tenant)
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TENANT_ID     = os.getenv("TENANT_ID")
+CLIENT_ID     = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+DOMAIN        = os.getenv("DOMAIN", "quantistai.com")
 
 # ---------------------------------------------------------------------------
 # Logging
